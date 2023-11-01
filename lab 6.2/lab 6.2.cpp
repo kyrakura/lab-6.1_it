@@ -19,15 +19,6 @@ void Print(int a[], const int size) {
     cout << endl;
 }
 
-int Count(int a[], const int size) {
-    int count = 0;
-    for (int i = 0; i < size; i++) {
-        if (a[i] < 0 && i % 3 != 0) {
-            count++;
-        }
-    }
-    return count;
-}
 double MinMax(int a[], const int size) {
     if (size == 0) {
         return 0.0;
@@ -60,10 +51,6 @@ int main() {
 
     cout << "Початковий масив: ";
     Print(a, N);
-
-    int count = Count(a, N);
-
-    cout << "Кількість від'ємних елементів, крім кратних 3: " << count << endl;
 
     double averageMinMax = MinMax(a, N);
     cout << "Середнє арифметичне максимального та мінімального елементів: " << averageMinMax << endl;
